@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+  margin: 0;
+  padding: 20px;
+}
+
+h1.titulo {
+  margin: 20px 0; /* Espacio vertical alrededor del título */
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.5rem;
+  color: #ff6347; /* Tomato color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1#msg-final {
+  text-align: center;
+  color: crimson;
+  transition: all 0.5s ease;
+  transform: scale(0);
+  min-height: 50px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #4682b4; /* Steel blue */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h2.palabra {
+  margin: 20px auto;
+  text-align: center;
+  color: royalblue;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Alinear verticalmente */
+  margin: 20px 0; /* Espacio entre el título y la imagen */
+}
+
+.img-ahorcado {
+  text-align: center;
+}
+
+.ahorcado-img {
+  height: 100px; /* Ajustar la altura de la imagen a 100px */
+  display: none; /* Ocultar todas las imágenes inicialmente */
+}
+
+.keyboard {
+  border: 2px solid #4682b4; /* Steel blue */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: fit-content; /* Ajusta el tamaño al contenido */
+}
+
+#abcdario {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #ff7f50; /* Coral color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px; /* Espaciado más estrecho entre botones */
+}
+
+button:hover {
+  background-color: #ff6347; /* Tomato color on hover */
+}
+
+.mensaje {
+  margin-left: 20px; /* Espacio para el mensaje */
+  align-self: center; /* Centra el mensaje verticalmente */
+  color: #4682b4; /* Steel blue */
+  font-size: 1.5rem;
+}
+
+.letra {
+  padding: 10px 15px;
+  margin: 5px; /* Espaciado más estrecho entre letras */
+  background-color: #ffebcd; /* Blanched Almond */
+  border: 2px solid #ff6347; /* Tomato color */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1.2rem;
+}
+
+.letra:disabled {
+  background-color: rgba(255, 0, 0, 0.5); /* Color deshabilitado */
+  cursor: not-allowed;
+}
+
+.letra:hover:not(:disabled) {
+  background-color: #ff6347; /* Cambia a color tomate al pasar el mouse */
+  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+@keyframes celebration {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
